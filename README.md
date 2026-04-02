@@ -33,8 +33,13 @@ pip install --upgrade pip
 
 ---
 
-## ⚡ 4. Install CUDA‑enabled PyTorch + Torchaudio (CUDA 12.1)
+## ⚡ 4. Install PyTorch + Torchaudio (CUDA 12.1)
 
+### CPU‑only (recommended unless you have CUDA)
+```powershell
+pip install torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+```
+### OR CUDA‑enabled
 ```powershell
 pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
@@ -60,7 +65,7 @@ pip install huggingface_hub==0.19.4
 ## 🔊 7. Install soundfile backend (required on Windows)
 
 ```powershell
-pip install soundfile
+pip install soundfile sounddevice
 ```
 
 ---
