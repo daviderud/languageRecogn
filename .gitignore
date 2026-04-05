@@ -1,0 +1,6 @@
+# Ignore temporary model folders
+tmp/
+tmp_langid/
+
+# Ignore all WAV audio files
+*.wav
