@@ -49,7 +49,7 @@ pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
 ## 🧠 5. Install SpeechBrain
 
 ```powershell
-pip install speechbrain
+pip install speechbrain==1.0.3
 ```
 
 ---

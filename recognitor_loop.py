@@ -1,4 +1,11 @@
 import sounddevice as sd
+import soundfile as sf
+import numpy as np
+import torch
+import torch.nn.functional as F
+from speechbrain.inference.classifiers import EncoderClassifier
+from speechbrain.utils.fetching import LocalStrategy
+
 
 print("Available input devices:\n")
 devices = sd.query_devices()
@@ -13,13 +20,7 @@ device_index = int(input("\nSelect input device index: "))
 print(f"Using device: {devices[device_index]['name']}")
 
 
-import sounddevice as sd
-import soundfile as sf
-import numpy as np
-import torch
-import torch.nn.functional as F
-from speechbrain.inference.classifiers import EncoderClassifier
-from speechbrain.utils.fetching import LocalStrategy
+
 
 # Load SpeechBrain model once
 model = EncoderClassifier.from_hparams(
